@@ -24,13 +24,13 @@ function resetAccount() {
   $_SESSION['transfers'] = [];
 }
 
-// // Tambah kat bawah sekali dalam common.php
-// if (session_status() === PHP_SESSION_NONE) {
-//     session_start();
-// }
+// Tambah kat bawah sekali dalam common.php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
-// if (!isset($_SESSION['csrf_token'])) {
-//     // Kita generate token random yang susah hacker nak teka
-//     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
-// }
+if (!isset($_SESSION['csrf_token'])) {
+    // Kita generate token random yang susah hacker nak teka
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
 ?>

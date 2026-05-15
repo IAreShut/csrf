@@ -4,8 +4,11 @@ if (!isLoggedIn()) {
   header('Location: /login.html');
 }
 
-$amount = $_REQUEST['amount'];
-$to = $_REQUEST['to'];
+// $amount = $_REQUEST['amount'];
+// $to = $_REQUEST['to'];
+
+$amount = $_POST['amount'];
+$to = $_POST['to'];
 
 if ($amount > $_SESSION['balance']) {
   die("insufficient funds");
